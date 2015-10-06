@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>The Weather Channel Test</title>
+        <link type="text/css" rel="stylesheet" href="styles/styles.min.css" />
+    </head>
+    <body> 
+        <div class="wrapper" data-ng-controller="WeatherChannelController">
+            <div class="col-wrapper">
+                <div class="col">
+                    <section>
+                        <h1>{{sections.section1.header}}</h1>
+                        <img data-ng-src="{{sections.section1.imgUrl}}">
+                    </section>
+                </div>
+                <div class="col">
+                    <section>
+                        <h2>{{sections.section2.header}}</h2>
+                        <p>{{sections.section2.content}}</p>
+                    </section>
+                </div>   
+                <div class="col">
+                    <section>
+                        <h2>{{sections.section3.header}}</h2>
+                        <p>{{sections.section3.content}}</p>
+                    </section>
+                </div>  
+            </div> 
+            <custom-footer></custom-footer>
+            <div style="text-align:center;">
+                <button dont-touch type="button">Don't click me. {{directiveArea}}</button>
+            </div>
+        </div>
+
+        <!-- these would normally be concat and minified with grunt or another tool -->
+        <script type="application/javascript" src="../scripts/libs/angular.min.js"></script>
+         <!-- using thirdparty , normally would be downloaded and merged with grunt or another tool. Wanted to show using it inside directive -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+         <!-- angular code -->
+        <script type="application/javascript" src="../scripts/app.js"></script>
+    </body>
+</html>
+
